@@ -73,9 +73,7 @@ z-index: var(--z-fixed);
 {
   padding: .5rem; 
   align-items: center;
-  white-space: nowrap;
   justify-content: space-between;
-  overflow: hidden;
 }
 .nav_name, .nav_icon
 {
@@ -87,6 +85,7 @@ z-index: var(--z-fixed);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  white-space: nowrap;
   overflow: hidden;
 }
 .nav_logo, .nav_link
