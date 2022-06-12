@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="../../Scripts/Css/Funcionarios/Funcionarios.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+</head>
+<body id="body-pd">
+    <!--Cabeçalho-->
+    <header class="header" id="header">
+        <div class="header_toggle"> <i class='bx bx-menu' id="header-toggle"></i> </div>
+        <div class="header_img"></div>
+    </header>
+    <!--SideBar-->
+    <div class="l-navbar" id="nav-bar">
+        <nav class="nav">
+            <div>
+                <a href="../Clientes/Cardapio.html" class="nav_logo"><i class='bx bx-layer nav_logo-icon'></i><span class="nav_logo-name">Cardápios</span></a>
+                <div class="nav_list">  
+                    <a href="MinhasInformacoes.html" class="nav-link active"> <i class='bx bx-user bx-sm nav_icon'></i> <span class="nav_name"> Usuario </span></a>
+                    <a href="GerenciaProdutos.html" class="nav-link"> <i class="bx bx-clipboard bx-sm nav_icon"></i> <span class="nav_name"> Produtos </span> </a>
+                    <a href="GerenciaCupons.html" class="nav-link"> <i class="bx bx-money-withdraw bx-sm nav_icon"></i> <span class="nav_name"> Cupons </span> </a>
+                    <a href="Relatorios.html" class="nav-link"> <i class='bx bx-bar-chart-alt-2 bx-sm nav_icon'></i> <span class="nav_name"> Relatórios </span> </a>
+                </div>                
+            </div>
+            <a href="#" class="nav-link"> <i class="bx bx-log-out bx-sm nav_icon"></i> <span class="nav_name">Sair</span></a>
+        </nav>
+    </div>
+    <!--Conteudo principal-->
+
+    <div class="col-md-7 bg-white">
+
+        <h2>Cadastro de Produto</h2>
+
+        <form class="needs-validation" novalidate>
+            <div class="mb-3">
+                <label for="nomeDoProduto" class="form-label">Nome do Produto</label>
+                <input type="text" class="form-control" id="nomeDoProduto" required>
+                <div class="invalid-feedback">
+                    Por favor insira o nome do produto.
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="valorDoProduto" class="form-label">Valor</label>
+                <input type="number" class="form-control" id="valorDoProduto" aria-describedby="valorHelp"
+                       placeholder="10,00" required>
+                <div id="valorHelp" class="form-text">
+                    O valor deve ser apenas um número, separado por vírgula, por exemplo 3,00 (e não 3.00).
+                </div>
+                <div class="invalid-feedback">
+                    Por favor insira o preço do produto.
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="descricaoDoProduto" class="form-label">Descrição</label>
+                <textarea type="text" class="form-control descricao" id="descricaoDoProduto"> </textarea>
+            </div>
+
+            <div class="mb-3">
+                <label for="fotoDoProduto" class="form-label">Imagem do arquivo:</label>
+                <input class="form-control" type="file" id="fotoDoProduto">
+            </div>
+
+
+            <div class="mb-3">
+                <button class="btn btn-primary" onclick="gravarProduto()">Cadastrar</button>
+                <!--                    <input type="button" value="Cadastrar" class="btn btn-outline-success botao">-->
+                <!--            <input type="button" value="Voltar" class="btn btn-outline-success botao"></input>-->
+            </div>
+        </form>
+    </div>
+    <!--Conteudo secundario-->
+    <div>
+
+    </div>
+    <script src="../../Scripts/JavaScript/Funcionarios/Funcionarios.js"></script>
+</body>
+</html>
